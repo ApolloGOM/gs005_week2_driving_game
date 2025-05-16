@@ -25,25 +25,29 @@ public class CameraController : MonoBehaviour
     {
         //Method 2, using a variable for the offset
         transform.position = player.position + cameraOffset;
+        
+        
+        //transform.LookAt();
+        
+        //This is to get it to have the camera change from 3rd to 1st person and back again.
+        //if (Input.GetKeyDown(KeyCode.P))
 
-        if (Input.GetKeyDown(KeyCode.P))
-
-            if (isFirstPerson == false)
+            //if (isFirstPerson == false)
         {     
             
-            cameraOffset = FPcameraOffset;
-            isFirstPerson = true;
+           // cameraOffset = FPcameraOffset;
+           //isFirstPerson = true;
         }
-        else 
+       // else 
         {
-            cameraOffset = new Vector3(10, 6, 0);
-            isFirstPerson = false;
+           // cameraOffset = new Vector3(10, 6, 0);
+           // isFirstPerson = false;
         }
         //Method 3 to be able to use a second button to activate the camera movement
-       // if (Input.GetKeyDown.O)
+        // if (Input.GetKeyDown.O)
         //{ 
-         //   cameraOffset = new Vector3(0,0,0)
-       // }
+        //   cameraOffset = new Vector3(0,0,0)
+        // }
 
     }
 

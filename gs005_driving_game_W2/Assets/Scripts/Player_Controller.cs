@@ -25,10 +25,11 @@ public class Player_Controller : MonoBehaviour
         //transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         //Method 3, using the physics engine to move our object forward
-        //rb.AddForce(Vector3.forward * speed);
+        //rb.AddForce(Vector3.forward * speed, Time.deltaTime * verticalInput);
 
         //Method 4, using the physics engine to move our object forward
-        //rb.AddRelativeForce(Vector3.forward * speed);
+        //rb.AddRelativeForce(Vector3.forward * speed * Time.deltaTime * verticalInput);
+
 
         //Movement mechanics
 
@@ -37,8 +38,6 @@ public class Player_Controller : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal" + playerIndex); //Left, Right, A, D, Analogue Stick Left/Right
         verticalInput = Input.GetAxis("Vertical" + playerIndex); //Up, Drown, W, S, Analogue Stick Up/Down
 
-        //Move the player left and right
-        
         //If you change Translate to rotate and Vector3.Right to up it will turn instead of shift
         transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
 
